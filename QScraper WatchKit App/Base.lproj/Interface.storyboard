@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--OneQuery-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="OneQuery" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="QScraper_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="w6B-QW-fAR">
+                            <items>
+                                <button width="1" alignment="left" title="Query" id="brR-JF-tQa">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="1" green="0.79872505839999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="startQuery" destination="AgC-eL-Hgc" id="1NU-ia-B5M"/>
+                                    </connections>
+                                </button>
+                                <table alignment="left" id="W6t-NR-BJB">
+                                    <items>
+                                        <tableRow identifier="ContentTableRow" selectable="NO" id="Buu-Gq-hiH" customClass="ContentTableRow" customModule="QScraper_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" id="RDQ-v4-G0G">
+                                                <items>
+                                                    <label alignment="left" textAlignment="left" numberOfLines="0" id="Azf-5f-eMu"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="contentLabel" destination="Azf-5f-eMu" id="dCl-Fl-ooI"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="contentTable" destination="W6t-NR-BJB" id="abm-9e-Xa4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="25"/>
+        </scene>
+    </scenes>
+</document>
